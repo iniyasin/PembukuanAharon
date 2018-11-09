@@ -1,11 +1,72 @@
 .root{
-    -fx-background-color: #b0c4de;
+    -fx-background-color: #788a8c;
+}
+
+#id_menubar{
+    -fx-font-family: "Noto Sans CJK KR Regular";
+    -fx-font-size: 12px;
 }
 
 #id_mainmenu{
-    -fx-border-color: black;
+    -fx-border-color: #dcdcdc;
     -fx-border-style: round;
-    -fx-border-weight: 1px;
-    -fx-border-radius: 3px;
-    -fx-border-shadow: 0 0 0 7px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+    -fx-indent: 10px;
+}
+
+#lbl_search{
+    -fx-text-fill: ghostwhite;
+    -fx-font-family: "Noto Sans CJK KR Bold";
+    -fx-font-size: 12px;
+}
+#id_searchbutton{
+    -fx-font-family: "Noto Sans CJK KR Bold";
+    -fx-font-size: 12px;
+}
+#lbl_tanggal{
+    -fx-text-fill: ghostwhite;
+    -fx-font-family: "Noto Sans CJK KR Bold";
+    -fx-font-size: 12px;
+}
+#lbl_transaksi{
+    -fx-text-fill: ghostwhite;
+    -fx-font-family: "Noto Sans CJK KR Bold";
+    -fx-font-size: 12px;
+}
+#cbx_transaksi{
+    -fx-font-family: "Noto Sans CJK KR Regular";
+}
+#btn_tambah{
+    -fx-font-family: "Noto Sans CJK KR Regular";
+}
+
+#id_tableview{
+    -fx-font-family: "Noto Sans CJK KR Regular";
+}
+
+#id_saldo {
+    -fx-padding: 10px;
+    -fx-indent: 10px;
+}
+#lbl_saldo{
+    -fx-text-fill: ghostwhite;
+    -fx-font-family: "Noto Sans CJK KR Bold";
+    -fx-font-size: 12px;
+}
+#lbl_profit{
+     -fx-text-fill: ghostwhite;
+    -fx-font-family: "Noto Sans CJK KR Bold";
+    -fx-font-size: 12px;
+ }
+#lbl_bagihasil{
+    -fx-text-fill: ghostwhite;
+    -fx-font-family: "Noto Sans CJK KR Bold";
+    -fx-font-size: 12px;
+}
+#lbl_total{
+    -fx-text-fill: ghostwhite;
+    -fx-font-family: "Noto Sans CJK KR Bold";
+    -fx-font-size: 12px;
 }
