@@ -23,35 +23,9 @@
 <BorderPane fx:id="id_borderpane"
             xmlns="http://javafx.com/javafx/8.0.121"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.main.feature.java.MenuController"
+            fx:controller="com.main.feature.java.LoginController"
             stylesheets="/com/main/feature/fxml/Main.css"
             styleClass="root">
-    <top>
-        <HBox fx:id="id_hbox"
-              maxWidth="Infinity"
-              prefWidth="1024"
-              BorderPane.alignment="TOP_LEFT">
-         <BorderPane>
-            <center>
-                  <MenuBar id="id_menubar"
-                           focusTraversable="true"
-                           maxWidth="Infinity"
-                           prefWidth="1024">
-                      <menus>
-                          <Menu text="Master" />
-                          <Menu text="Laporan" />
-                          <Menu text="Utilitas" />
-                          <Menu text="Help" />
-                          <Menu text="About" />
-                      </menus>
-                      <cursor>
-                          <Cursor fx:constant="V_RESIZE" />
-                      </cursor>
-                  </MenuBar>
-            </center>
-         </BorderPane>
-        </HBox>
-    </top>
 
     <center>
         <GridPane fx:id="id_mainmenu"

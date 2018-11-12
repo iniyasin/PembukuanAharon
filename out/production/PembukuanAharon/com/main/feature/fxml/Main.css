@@ -2,6 +2,20 @@
     -fx-background-color: #788a8c;
 }
 
+/** Login Form **/
+#id_login{
+    -fx-padding: 10px;
+    -fx-background-color: lightgray;
+}
+#lbl_login{
+    -fx-text-fill: ghostwhite;
+    -fx-font-weight: bolder;
+    -fx-font-family: "Noto Sans CJK KR Bold";
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
+
+/**Read Form**/
 #id_menubar{
     -fx-font-family: "Noto Sans CJK KR Regular";
     -fx-font-size: 12px;
