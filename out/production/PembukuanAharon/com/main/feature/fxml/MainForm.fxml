@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<BorderPane fx:id="mainForm" styleClass="root"
+            stylesheets="/com/main/feature/fxml/Main.css"
+            xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.main.feature.java.Main">
+
+    <center>
+        <GridPane id="id_mainmenu" fx:id="id_mainmenu" hgap="10" vgap="10">
+
+            <Label id="lbl_search" text="Cari" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button id="id_searchbutton" text="Cari" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+            <Label id="lbl_tanggal" text="Tanggal" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label id="lbl_transaksi" text="Transaksi" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <ComboBox id="cbx_transaksi" prefWidth="134" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Debit" />
+                        <String fx:value="Kredit" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+
+            <Button id="btn_tambah" fx:id="btn_tambah"
+                    prefWidth="135" text="Tambah Data"
+                    onAction="#tambah_data"
+                    GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <HBox GridPane.columnIndex="0"
+                  GridPane.columnSpan="5"
+                  GridPane.rowIndex="4"
+                  alignment="CENTER" maxWidth="Infinity">
+                <padding><Insets top="10" left="10" bottom="10" right="10" /></padding>
+            <TableView id="id_tableview" fx:id="id_tableview">
+                <columns>
+                    <TableColumn prefWidth="50" text="No." />
+                    <TableColumn prefWidth="150" text="Nomor Faktur" />
+                    <TableColumn prefWidth="200" text="Nama" />
+                    <TableColumn prefWidth="200" text="Transaksi A" />
+                    <TableColumn prefWidth="200" text="Transaksi B" />
+                    <TableColumn prefWidth="200" text="Transaksi C" />
+                    <TableColumn prefWidth="200" text="Keterangan" />
+                </columns>
+            </TableView>
+            </HBox>
+        </GridPane>
+    </center>
+    <bottom>
+        <GridPane id="id_saldo" fx:id="id_saldo" alignment="BOTTOM_LEFT" hgap="10" prefHeight="200" prefWidth="350" vgap="10">
+            <Label id="lbl_saldo" text="Saldo : " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Text fx:id="saldo" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label id="lbl_profit" text="Profit : " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Text fx:id="profit" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label id="lbl_bagihasil" text="Bagi Hasil : " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Text fx:id="bagi_hasil" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label id="lbl_total" text="Total : " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Text fx:id="total" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        </GridPane>
+    </bottom>
+</BorderPane>

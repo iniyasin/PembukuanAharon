@@ -6,11 +6,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 public class LoginController {
     public Button btn_masuk;
@@ -19,14 +20,10 @@ public class LoginController {
     public Text id_error;
 
     public void signIn() throws IOException {
-        if ((id_username.getText() == "admin") && (id_password.getText() == "admin")){
-            Stage mainForm = new Stage();
-            Parent mainRoot = FXMLLoader.load(getClass().getResource("../fxml/Main.fxml"));
+        Stage mainForm = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("../fxml/MainForm.fxml"));
 
-            mainForm.setScene(new Scene(mainRoot));
-            mainForm.show();
-        } else{
-            id_error.setText("Username atau Password Salah!!!");
-        }
+        mainForm.setScene(new Scene(root));
+        mainForm.show();
     }
 }

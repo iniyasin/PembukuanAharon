@@ -12,11 +12,12 @@
 <?import javafx.scene.control.PasswordField?>
 <GridPane xmlns="http://javafx.com/javafx/8.0.121"
           xmlns:fx="http://javafx.com/fxml/1"
+          fx:id="login"
           hgap="10" vgap="10"
           styleClass="root"
           alignment="CENTER"
           stylesheets="/com/main/feature/fxml/Main.css"
-          fx:controller="com.main.feature.java.LoginController">
+          fx:controller="com.main.feature.java.Main">
     <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
     <Label id="lbl_login" text="LOGIN"
            GridPane.columnIndex="0"
