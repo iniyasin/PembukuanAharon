@@ -7,21 +7,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import java.awt.*;
 
 public class Main extends Application {
     @FXML
-    AnchorPane formTambah = new AnchorPane();
+    Button btn_masuk;
     @FXML
-    GridPane mainForm = new GridPane();
+    TextField id_username;
     @FXML
-    Button btn_masuk = new Button();
+    TextField id_password;
 
-    Stage window;
+    String user = "admin";
+    String pass = "admin";
+    String checkUser, checkPass;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -33,5 +32,16 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public void signIn(ActionEvent actionEvent) {
+
+        checkUser = id_username.getText().toString();
+        checkPass = id_password.getText().toString();
+
+        if (checkUser.equals(user) && checkPass.equals(pass)){
+            
+        }
+
     }
 }

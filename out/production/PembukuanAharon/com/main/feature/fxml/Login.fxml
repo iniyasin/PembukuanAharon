@@ -5,54 +5,49 @@
 
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.PasswordField?>
-<GridPane xmlns="http://javafx.com/javafx/8.0.121"
-          xmlns:fx="http://javafx.com/fxml/1"
-          fx:id="login"
-          hgap="10" vgap="10"
-          styleClass="root"
-          alignment="CENTER"
-          stylesheets="/com/main/feature/fxml/Main.css"
-          fx:controller="com.main.feature.java.Main">
-    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:id="login"
+            styleClass="root"
+            stylesheets="/com/main/feature/fxml/Main.css"
+            fx:controller="com.main.feature.java.Main">
+
+    <VBox alignment="CENTER" prefWidth="400" prefHeight="300">
     <Label id="lbl_login" text="LOGIN"
-           GridPane.columnIndex="0"
-           GridPane.rowIndex="0"
-           GridPane.columnSpan="10"
-           prefWidth="400"
            textAlignment="CENTER"
            alignment="TOP_CENTER"/>
-
-    <Label text="ID"
-           id="id_masuk"
-           GridPane.columnIndex="0"
-           GridPane.rowIndex="5"/>
-    <TextField fx:id="id_username"
-               GridPane.columnIndex="1"
-               GridPane.rowIndex="5"/>
-    <Label id="id_password" text="Password"
-           GridPane.columnIndex="0"
-           GridPane.rowIndex="6"/>
-    <PasswordField fx:id="id_password"
-               GridPane.columnIndex="1"
-               GridPane.rowIndex="6"/>
-    <RadioButton id="rbt_admin" text="Admin"
-                 GridPane.columnIndex="0"
-                 GridPane.rowIndex="7"/>
-    <RadioButton id="rbt_karyawan" text="Karyawan"
-                 GridPane.columnIndex="1"
-                 GridPane.rowIndex="7"/>
-    <HBox spacing="10" alignment="BOTTOM_RIGHT"
-          GridPane.columnIndex="1"
-          GridPane.rowIndex="8">
-        <Button fx:id="btn_masuk" id="btn_masuk"
-                text="Masuk"
-                onAction="#signIn"/>
-    </HBox>
-    <Text fx:id="id_error" GridPane.columnIndex="0"
-          GridPane.rowIndex="9"/>
-</GridPane>
+        <GridPane hgap="10" vgap="10" alignment="BASELINE_CENTER">
+            <Label GridPane.columnIndex="1"
+                   GridPane.rowIndex="1"
+                    text="ID"
+                   id="id_masuk"/>
+            <TextField fx:id="id_username"
+                       GridPane.columnSpan="3"
+                       GridPane.columnIndex="2"
+                       GridPane.rowIndex="1"/>
+            <Label id="id_password"
+                   text="Password"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="2"/>
+            <PasswordField fx:id="id_password"
+                           GridPane.columnSpan="3"
+                           GridPane.columnIndex="2"
+                           GridPane.rowIndex="2"/>
+            <HBox alignment="BOTTOM_RIGHT"
+                  GridPane.columnSpan="3"
+                  GridPane.columnIndex="2"
+                  GridPane.rowIndex="3">
+                <Button fx:id="btn_masuk" id="btn_masuk"
+                        text="Masuk"/>
+            </HBox>
+        </GridPane>
+        <Text fx:id="id_error" GridPane.columnIndex="0"
+              GridPane.rowIndex="9"/>
+    </VBox>
+</AnchorPane>
